@@ -1,0 +1,69 @@
+{
+  "name": "ComfyUI HYPIR",
+  "description": "HYPIR图像修复ComfyUI自定义节点 - 智能路径管理版",
+  "version": "2.0.0",
+  "author": "AI Assistant",
+  "license": "MIT",
+  "path_management": {
+    "use_folder_paths": true,
+    "auto_detect_models": true,
+    "hypir_models_dir": "models/HYPIR",
+    "diffusers_models_dir": "models/diffusers"
+  },
+  "default_models": {
+    "base_model": "stable-diffusion-2-base",
+    "hypir_weight": "HYPIR_sd2.pth"
+  },
+  "default_settings": {
+    "prompt": "high quality, detailed, sharp, photorealistic",
+    "lora_rank": 256,
+    "model_t": 200,
+    "coeff_t": 200,
+    "upscale_factor": 1,
+    "preset_config": "标准增强"
+  },
+  "model_urls": {
+    "HYPIR_sd2": {
+      "url": "https://huggingface.co/HYPIR/HYPIR/resolve/main/HYPIR_sd2.pth",
+      "description": "HYPIR基于SD2的预训练权重",
+      "target_path": "models/HYPIR/HYPIR_sd2.pth"
+    },
+    "stable_diffusion_2_base": {
+      "url": "stabilityai/stable-diffusion-2-base",
+      "description": "Stable Diffusion 2.0基础模型",
+      "target_path": "models/diffusers/stable-diffusion-2-base"
+    }
+  },
+  "directory_structure": {
+    "ComfyUI/models/HYPIR/": "HYPIR权重文件(.pth, .ckpt, .safetensors)",
+    "ComfyUI/models/diffusers/": "Stable Diffusion 2.0基础模型",
+    "fallback_paths": [
+      "pretrained_models/",
+      "models/checkpoints/",
+      "models/custom/"
+    ]
+  },
+  "features": [
+    "✅ 自动路径检测和管理",
+    "✅ ComfyUI folder_paths集成",
+    "✅ 下拉菜单选择模型，无需手动输入路径",
+    "✅ 智能预设配置系统",
+    "✅ 支持1-8倍上采样",
+    "✅ 自动LoRA rank检测",
+    "✅ 分块处理大图像"
+  ],
+  "documentation": {
+    "readme_zh": "README.md",
+    "readme_en": "README_EN.md",
+    "config": "config.json",
+    "source_project": "https://github.com/XPixelGroup/HYPIR"
+  },
+  "installation": {
+    "steps": [
+      "1. 将HYPIR_sd2.pth放入 ComfyUI/models/HYPIR/",
+      "2. 将stable-diffusion-2-base放入 ComfyUI/models/diffusers/",
+      "3. 重启ComfyUI，节点会自动检测模型",
+      "4. 使用下拉菜单选择模型，无需输入路径"
+    ]
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "id": "2416294f-f2af-43dc-9189-29cdf30c3d60",
+  "revision": 0,
+  "last_node_id": 14,
+  "last_link_id": 18,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "ImageConcatMulti",
+      "pos": [
+        2168.411865234375,
+        358.6331481933594
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image_1",
+          "name": "image_1",
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "label": "image_2",
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "f35bb4d336b97f19d31e7b02a109cd2b520b196a"
+      },
+      "widgets_values": [
+        2,
+        "right",
+        true,
+        null
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        1810.1485595703125,
+        -76.26898956298828
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "label": "MASK",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.46",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "pasted/image (5).png",
+        "image"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "PreviewImage",
+      "pos": [
+        2481.05224609375,
+        389.4578857421875
+      ],
+      "size": [
+        662.848876953125,
+        327.8251647949219
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.46",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "HYPIRImageRestoration",
+      "pos": [
+        2104.8310546875,
+        -67.53559112548828
+      ],
+      "size": [
+        672.273193359375,
+        279.0740051269531
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "label": "restored_image",
+          "name": "restored_image",
+          "type": "IMAGE",
+          "links": [
+            11,
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HYPIRImageRestoration"
+      },
+      "widgets_values": [
+        "stable-diffusion-2-base",
+        "HYPIR_sd2.pth",
+        "extremely sharp, deblurred, enhanced clarity, detailed, high quality restoration",
+        2,
+        "人像优化",
+        256,
+        300,
+        300
+      ]
+    },
+    {
+      "id": 6,
+      "type": "Image Comparer (rgthree)",
+      "pos": [
+        2858.1826171875,
+        -91.52796936035156
+      ],
+      "size": [
+        292.0505065917969,
+        406.2672424316406
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "dir": 3,
+          "label": "image_a",
+          "name": "image_a",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "dir": 3,
+          "label": "image_b",
+          "name": "image_b",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "rgthree-comfy",
+        "ver": "7a3910163d377fcfa79e5790a9ba446efb783d56",
+        "comparer_mode": "Slide"
+      },
+      "widgets_values": [
+        [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_sehld_00003_.png&type=temp&subfolder=&rand=0.7211125710304116"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_sehld_00004_.png&type=temp&subfolder=&rand=0.7972585096086594"
+          }
+        ]
+      ]
+    }
+  ],
+  "links": [
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      10,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      12,
+      10,
+      0,
+      8,
+      1,
+      "IMAGE"
+    ],
+    [
+      16,
+      4,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      4,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      4,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8140274938684575,
+      "offset": [
+        -1570.9784008114138,
+        269.3867829844475
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
