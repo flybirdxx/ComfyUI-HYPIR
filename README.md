@@ -161,6 +161,19 @@ A: 优化设置：
 
 ### 📊 效果展示
 
+#### 🎬 **ComfyUI工作流展示**
+<div align="center">
+  <img src="example_workflows/ComfyUI_temp_ebbeb_00001_.png" alt="ComfyUI-HYPIR工作流展示" width="100%">
+  <p><i>ComfyUI中的HYPIR图像修复工作流</i></p>
+</div>
+
+#### 🖼️ **修复效果对比**
+<div align="center">
+  <img src="example_workflows/wechat_2025-07-31_163558_564.png" alt="HYPIR修复效果对比" width="100%">
+  <p><i>修复前后效果对比展示</i></p>
+</div>
+
+#### 🎯 **应用场景**
 本节点在以下场景表现优异：
 - ✅ **老照片修复** - 褪色、划痕、噪点去除
 - ✅ **模糊图像** - 运动模糊、散焦恢复  

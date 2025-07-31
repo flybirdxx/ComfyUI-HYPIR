@@ -161,6 +161,19 @@ A: Optimize settings:
 
 ### 📊 Effect Showcase
 
+#### 🎬 **ComfyUI Workflow Demo**
+<div align="center">
+  <img src="example_workflows/ComfyUI_temp_ebbeb_00001_.png" alt="ComfyUI-HYPIR Workflow Demo" width="100%">
+  <p><i>HYPIR Image Restoration workflow in ComfyUI</i></p>
+</div>
+
+#### 🖼️ **Before & After Comparison**
+<div align="center">
+  <img src="example_workflows/wechat_2025-07-31_163558_564.png" alt="HYPIR Restoration Effect Comparison" width="100%">
+  <p><i>Before and after restoration comparison</i></p>
+</div>
+
+#### 🎯 **Application Scenarios**
 This node excels in the following scenarios:
 - ✅ **Vintage Photo Restoration** - fading, scratches, noise removal
 - ✅ **Blurry Images** - motion blur, defocus recovery
