@@ -178,28 +178,3 @@ This project is based on the following excellent open-source projects:
 Special thanks to the HYPIR team for their outstanding work:
 > Xinqi Lin, Fanghua Yu, Jinfan Hu, Zhiyuan You, Wu Shi, Jimmy S. Ren, Jinjin Gu, Chao Dong
 
-### 📄 License
-
-This project uses MIT License. Please note:
-- **HYPIR Original Project**: Non-commercial use only
-- **ComfyUI-HYPIR Node**: MIT License, but subject to HYPIR's non-commercial restrictions
-
-For commercial use, please contact the original authors: jinjin.gu@suppixel.ai
-
-### 📮 Contact
-
-- **Technical Issues**: Submit GitHub Issue
-- **Feature Requests**: GitHub Discussions
-- **HYPIR Original Project**: xqlin0613@gmail.com
-
----
-
-<div align="center">
-
-### 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=XPixelGroup/HYPIR&type=Date)](https://star-history.com/#XPixelGroup/HYPIR&Date)
-
-**If this project helps you, please give it a Star⭐ for support!**
-
-</div>
